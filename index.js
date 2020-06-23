@@ -47,7 +47,7 @@ function main(root = document.body) {
     };
 
     const cylinder = () => {
-        scene.add(new THREE.Mesh(new THREE.ConeGeometry(10, 10, 5), new THREE.MeshNormalMaterial()));
+        scene.add(new THREE.Mesh(new THREE.CylinderGeometry(10, 10, 10, 20), new THREE.MeshNormalMaterial()));
         scene.remove
     };
 
@@ -55,25 +55,28 @@ function main(root = document.body) {
     const addShapeBox = document.querySelector('.addBox');
     addShapeBox.addEventListener('click', e => {
         scene.remove.apply(scene, scene.children);
-
         box();
     });
 
     const addShapeSphere = document.querySelector('.addSphere');
     addShapeSphere.addEventListener('click', e => {
         scene.remove.apply(scene, scene.children);
-
         sphere();
     });
 
     const addShapeCone = document.querySelector('.addCone');
     addShapeCone.addEventListener('click', e => {
         scene.remove.apply(scene, scene.children);
-
         cone();
     });
 
-    
+    const addShapeCylinder = document.querySelector('.addCylinder');
+    addShapeCylinder.addEventListener('click', e => {
+        scene.remove.apply(scene, scene.children);
+        cylinder();
+    });
+
+
 
 
 
