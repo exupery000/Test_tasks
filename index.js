@@ -69,6 +69,7 @@ function main(root = document.body) {
         scene.remove.apply(scene, scene.children);
         cone();
     });
+    
 
     const addShapeCylinder = document.querySelector('.addCylinder');
     addShapeCylinder.addEventListener('click', e => {
